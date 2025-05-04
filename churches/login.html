@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        body {
+            height: 100vh;
+            display: flex;
+            overflow: hidden;
+        }
+        
+        .login-container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .login-form {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2rem;
+            background-color: #fff;
+        }
+        
+        .login-form-inner {
+            max-width: 400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        .login-title {
+            font-size: 1.5rem;
+            color: #aaa;
+            font-weight: 300;
+            margin-bottom: 2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #004;
+            font-weight: 600;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        .form-check {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-check-input {
+            margin-right: 0.5rem;
+        }
+        
+        .form-check-label {
+            font-size: 0.9rem;
+        }
+        
+        .btn-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .btn-login {
+            background-color: #f0a030;
+            color: white;
+            border: none;
+            padding: 0.5rem 2rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+        
+        .btn-login:hover {
+            background-color: #e09020;
+        }
+        
+        .register-link {
+            margin-left: 1.5rem;
+            color: #004;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .register-link:hover {
+            text-decoration: underline;
+        }
+        
+        .banner {
+            flex: 1;
+            background-color: #8b3a3a;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            position: relative;
+        }
+        
+        .cross {
+            width: 120px;
+            height: 200px;
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        
+        .cross:before, .cross:after {
+            content: '';
+            position: absolute;
+            background-color: white;
+        }
+        
+        .cross:before {
+            width: 30px;
+            height: 200px;
+            left: 45px;
+        }
+        
+        .cross:after {
+            width: 120px;
+            height: 30px;
+            top: 40px;
+        }
+        
+        .banner-text {
+            font-size: 1.2rem;
+            font-weight: 300;
+            position: absolute;
+            bottom: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .login-container {
+                flex-direction: column;
+            }
+            
+            .login-form {
+                order: 2;
+                padding: 1.5rem;
+            }
+            
+            .banner {
+                order: 1;
+                padding: 2rem;
+                min-height: 200px;
+            }
+            
+            .cross {
+                width: 80px;
+                height: 120px;
+                margin-bottom: 1rem;
+            }
+            
+            .cross:before {
+                width: 20px;
+                height: 120px;
+                left: 30px;
+            }
+            
+            .cross:after {
+                width: 80px;
+                height: 20px;
+                top: 25px;
+            }
+            
+            .banner-text {
+                position: static;
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-form">
+            <div class="login-form-inner">
+                <h1 class="login-title">Please log in</h1>
+                
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="email">Email :</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password :</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="remember" name="remember">
+                        <label class="form-check-label" for="remember">Remember me</label>
+                    </div>
+                    
+                    <div class="btn-container">
+                        <button type="submit" class="btn-login">Login</button>
+                        <a href="reg.html" class="register-link">Register</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="banner">
+            <div class="cross"></div>
+            <div class="banner-text">bringing people together</div>
+        </div>
+    </div>
+</body>
+</html>
